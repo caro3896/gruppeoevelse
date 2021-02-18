@@ -1,6 +1,6 @@
 //Konstanter for restdb
 const url = "https://faellespassion-9f07.restdb.io/rest/faellespassion";
-const medieurl = "";
+const medieurl = "https://faellespassion-9f07.restdb.io/media/";
 const options = {
     headers: {
         'x-apikey': "602e60ce5ad3610fb5bb6312"
@@ -42,7 +42,7 @@ function start() {
 //Eventlistener knyttet til knapperne der vælger det aktive filter
 function filtrerGenre() {
     console.log("Klikket på genre");
-    filter = this.dataset.kategori;
+    filter = this.dataset.genre;
     document.querySelector(".valgt").classList.remove("valgt");
     this.classList.add("valgt");
     visSange();
@@ -64,7 +64,7 @@ const template = document.querySelector("template").content;
 
 //Funktion der viser sange i liste view
 function visSange() {
-    console.log(sange);
+    console.log("visSange");
 
     dest.textContent = "";
 
@@ -73,9 +73,9 @@ function visSange() {
         if (filter == sang.genre || filter == "alle") {
 
             const klon = template.cloneNode(true);
-            klon.querySelector(".billede").src = medieurl + sang.billede;
-            klon.querySelector(".navn").textContent = sang.navn;
-            klon.querySelector(".kunstner").textContent = sang.kunstner;
+            klon.querySelector(".billede").src = medieurl + sang.profilbillede;
+            klon.querySelector(".titel").textContent = sang.titel;
+            klon.querySelector(".kunstner").textContent = sang.band;
 
             klon.querySelector(".sang").addEventListener("click", () => visDetaljer(sang));
             dest.appendChild(klon);
@@ -86,4 +86,4 @@ function visSange() {
 function visDetaljer(hvad) {
     location.href = `detaljer.html?id=${hvad._id}`;
 }
-hentData();
+//hentData();
