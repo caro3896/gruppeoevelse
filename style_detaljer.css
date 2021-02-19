@@ -1,0 +1,87 @@
+/* Generelt */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(129, 234, 115);
+    background: radial-gradient(circle, rgb(239, 169, 185) 0%, rgb(216, 242, 147) 100%);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    max-width: 1600px;
+    margin: 0 5vw;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+article h3 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.img p {
+    text-align: center;
+    font-style: italic;
+}
+
+/* Tilbage knap */
+.tilbage {
+    padding: 20px;
+    margin: 20px;
+    border: 2px dotted rgba(125, 156, 226, 0.74);
+    background-color: #b6b6e5;
+    border-radius: 15px;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+        rgba(240, 46, 170, 0.3) -10px 10px,
+        rgba(240, 46, 170, 0.2) -15px 15px,
+        rgba(240, 46, 170, 0.1) -20px 20px,
+        rgba(240, 46, 170, 0.05) -25px 25px;
+
+    transition: 0.5s;
+}
+
+.tilbage:hover {
+    transform: scale(1.05);
+    background: rgba(240, 46, 170, 0.15);
+    transition: 0.5s;
+}
+
+/*Single view*/
+
+.sang-detalje {
+    padding: 20px;
+    margin: 20px;
+    border: 2px dotted rgba(125, 156, 226, 0.74);
+    background-color: #b6b6e5;
+    border-radius: 15px;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+        rgba(240, 46, 170, 0.3) -10px 10px,
+        rgba(240, 46, 170, 0.2) -15px 15px,
+        rgba(240, 46, 170, 0.1) -20px 20px,
+        rgba(240, 46, 170, 0.05) -25px 25px;
+
+    transition: 0.5s;
+}
+
+/* DESKTOP REGLER */
+@media (min-width:600px) {
+
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
