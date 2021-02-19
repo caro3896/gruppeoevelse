@@ -28,7 +28,7 @@ async function hentData() {
 
 function visSang() {
     console.log(id);
-    //    document.querySelector(".billede").src = medieurl + sang.profilbillede;
+    document.querySelector(".billede").src = medieurl + sang.profilbillede;
     document.querySelector(".titel").textContent = sang.titel;
     document.querySelector(".kunstner").textContent = sang.band;
     document.querySelector(".album").textContent = `Album: ${sang.album}`;
