@@ -31,10 +31,10 @@ function visSang() {
     //    document.querySelector(".billede").src = medieurl + sang.profilbillede;
     document.querySelector(".titel").textContent = sang.titel;
     document.querySelector(".kunstner").textContent = sang.band;
-    document.querySelector(".album").textContent = sang.album;
-    document.querySelector(".udgivelse").textContent = sang.udgivelsesår;
-    document.querySelector(".land").textContent = sang.land;
-    document.querySelector(".genre").textContent = sang.genre;
+    document.querySelector(".album").textContent = `Album: ${sang.album}`;
+    document.querySelector(".udgivelse").textContent = `Udgivelsesår: ${sang.udgivelsesår}`;
+    document.querySelector(".land").textContent = `Land: ${sang.land}`;
+    document.querySelector(".genre").textContent = `Genre: ${sang.genre}`;
     document.querySelector("button").addEventListener("click", tilbage);
 }
 
