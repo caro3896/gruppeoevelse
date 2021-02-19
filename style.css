@@ -44,7 +44,7 @@ button {
     border: 2px solid pink;
 }
 
-.alle {
+#alle {
     background-image: url(alle-test.png);
     background-size: cover;
 }
