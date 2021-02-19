@@ -1,0 +1,48 @@
+body {
+            background: rgb(174, 238, 232);
+            background: radial-gradient(circle, rgba(174, 238, 232, 1) 0%, rgba(210, 231, 255, 1) 100%);
+            font-family: 'Roboto', sans-serif;
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+
+        p {
+            font-style: italic;
+            color:#5e6495
+        }
+
+        #oversigt {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        }
+
+        img {
+            width: 100%;
+        }
+
+        article {
+            padding: 20px;
+            margin: 20px;
+            border: 2px dotted rgba(240, 46, 170, 0.4);
+            background-color: #e1f7f7;
+            border-radius: 15px;
+
+            box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+
+            transition: 0.5s;
+        }
+
+        article:hover {
+            transform: scale(1.05);
+            background: rgba(240, 46, 170, 0.15);
+            transition: 0.5s;
+        }
+
+        h2 {
+            text-align: center;
+            color: #740090;
+        }
+
+        h3 {
+            color: #740090;
+        }
