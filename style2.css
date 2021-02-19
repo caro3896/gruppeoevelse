@@ -1,0 +1,62 @@
+body {
+            background: rgb(129, 234, 115);
+            background: radial-gradient(circle, rgb(239, 169, 185) 0%, rgb(216, 242, 147) 100%);
+            font-family: 'Roboto', sans-serif;
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+
+        p {
+            font-style: italic;
+        }
+
+        #oversigt {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        }
+
+        img {
+            width: 100%;
+        }
+
+        article {
+            padding: 20px;
+            margin: 20px;
+            border: 2px dotted rgba(125, 156, 226, 0.74);
+            background-color: #b6b6e5;
+            border-radius: 15px;
+
+            box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+
+            transition: 0.5s;
+        }
+
+        article:hover {
+            transform: scale(1.05);
+            background: rgba(240, 46, 170, 0.15);
+            transition: 0.5s;
+        }
+
+        h2 {
+            text-align: center;
+            color: cadetblue;
+            font-size: 3.5em;
+            font-weight: 400;
+        }
+
+        h3 {
+            color: #080808;
+        }
+
+   button {
+            padding: 1rem 2rem;
+            font-size: 1.3rem;
+         background-color: #b6b6e5;
+            border-style: solid;
+       border-color: white;
+            margin: 1.4rem;
+            border-radius: 2px;
+       box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+
+
+        }
