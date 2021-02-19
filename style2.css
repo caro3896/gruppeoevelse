@@ -10,9 +10,9 @@ body {
             font-style: italic;
         }
 
-        main {
+        #oversigt {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
         }
 
         img {
@@ -39,11 +39,24 @@ body {
 
         h2 {
             text-align: center;
-            color: #000000;
-            transform: skewX(40deg);
+            color: cadetblue;
             font-size: 3.5em;
+            font-weight: 400;
         }
 
         h3 {
             color: #080808;
+        }
+
+   button {
+            padding: 1rem 2rem;
+            font-size: 1.3rem;
+         background-color: #b6b6e5;
+            border-style: solid;
+       border-color: white;
+            margin: 1.4rem;
+            border-radius: 2px;
+       box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+
+
         }
