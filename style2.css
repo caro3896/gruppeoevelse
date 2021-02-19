@@ -1,62 +1,147 @@
+/* Generelt */
+* {
+    box-sizing: border-box;
+}
+
 body {
-            background: rgb(129, 234, 115);
-            background: radial-gradient(circle, rgb(239, 169, 185) 0%, rgb(216, 242, 147) 100%);
-            font-family: 'Roboto', sans-serif;
-            padding-left: 5vw;
-            padding-right: 5vw;
-        }
+    background: rgb(129, 234, 115);
+    background: radial-gradient(circle, rgb(239, 169, 185) 0%, rgb(216, 242, 147) 100%);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
 
-        p {
-            font-style: italic;
-        }
+img {
+    width: 100%;
+}
 
-        #oversigt {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-        }
+main {
+    max-width: 1600px;
+}
 
-        img {
-            width: 100%;
-        }
+section {
+    margin: 0 5vw;
+}
 
-        article {
-            padding: 20px;
-            margin: 20px;
-            border: 2px dotted rgba(125, 156, 226, 0.74);
-            background-color: #b6b6e5;
-            border-radius: 15px;
+h3 {
+    margin-top: 10px;
+}
 
-            box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+article h3 {
+    text-align: center;
+}
 
-            transition: 0.5s;
-        }
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
 
-        article:hover {
-            transform: scale(1.05);
-            background: rgba(240, 46, 170, 0.15);
-            transition: 0.5s;
-        }
+p {
+    text-align: center;
+    font-style: italic;
+}
 
-        h2 {
-            text-align: center;
-            color: cadetblue;
-            font-size: 3.5em;
-            font-weight: 400;
-        }
+/* Splash/forside */
+#splash {
+    max-width: none;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(splash-test.png);
+    background-size: contain;
+    background-position: 50%;
+}
 
-        h3 {
-            color: #080808;
-        }
+/* Navigationsbar/filtre */
+#genre {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 20px;
+    overflow-x: scroll;
+}
 
-   button {
-            padding: 1rem 2rem;
-            font-size: 1.3rem;
-         background-color: #b6b6e5;
-            border-style: solid;
-       border-color: white;
-            margin: 1.3rem;
-            border-radius: 2px;
-       box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+button {
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+}
 
+button p {
+    visibility: hidden;
 
-        }
+}
+
+button:hover p {
+    visibility: visible;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.valgt {
+    border: 2px solid white;
+}
+
+.alle {
+    background-image: url(alle-test.png);
+    background-size: cover;
+
+}
+
+/* Oversigt */
+#oversigt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+article {
+    padding: 20px;
+    margin: 20px;
+    border: 2px dotted rgba(125, 156, 226, 0.74);
+    background-color: #b6b6e5;
+    border-radius: 15px;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+
+    transition: 0.5s;
+}
+
+article:hover {
+    transform: scale(1.05);
+    background: rgba(240, 46, 170, 0.15);
+    transition: 0.5s;
+}
+
+/* DESKTOP REGLER */
+
+@media (min-width:600px) {
+
+    /* Splash */
+
+    /* Navigationsbar/filtre */
+    #sortering {
+        width: 200px;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 2fr 4fr;
+    }
+
+    #genre {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: auto;
+    }
+
+    /* Oversigt */
+    #oversigt {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 80px 0px 50px 0px;
+
+    }
+}
