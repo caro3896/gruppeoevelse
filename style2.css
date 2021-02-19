@@ -88,12 +88,14 @@ button:hover p {
 
 /* Oversigt */
 #oversigt {
+    max-height: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
 }
 
 article {
+    max-height: 500px;
     padding: 20px;
     margin: 20px;
     border: 2px dotted rgba(125, 156, 226, 0.74);
