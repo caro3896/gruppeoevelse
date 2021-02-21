@@ -63,6 +63,13 @@ button {
     width: 86px;
     height: 86px;
     border-radius: 50%;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+        rgba(240, 46, 170, 0.3) -10px 10px,
+        rgba(240, 46, 170, 0.2) -15px 15px,
+        rgba(240, 46, 170, 0.1) -20px 20px,
+        rgba(240, 46, 170, 0.05) -25px 25px;
+
+    transition: 0.5s;
 }
 
 button p {
@@ -70,10 +77,17 @@ button p {
 
 }
 
+/*
+button:hover {
+    transform: scale(1.2);
+}
+*/
+
 button:hover p {
     visibility: visible;
     font-weight: 600;
     font-size: 1.2rem;
+    color: white;
 }
 
 .valgt {
@@ -83,8 +97,51 @@ button:hover p {
 .alle {
     background-image: url(alle-test.png);
     background-size: cover;
-
 }
+
+.pop {
+    background-image: url(./ikoner/pop.png);
+    background-size: cover;
+}
+
+.grunge {
+    background-image: url(./ikoner/grunge.png);
+    background-size: cover;
+}
+
+.hiphop {
+    background-image: url(./ikoner/hiphop.png);
+    background-size: cover;
+}
+
+.eurodance {
+    background-image: url(./ikoner/eurodance.png);
+    background-size: cover;
+}
+
+.ballade {
+    background-image: url(./ikoner/ballader.png);
+    background-size: cover;
+}
+
+.techno {
+    background-image: url(./ikoner/techno.png);
+    background-size: cover;
+}
+
+.jazz {
+    background-image: url(./ikoner/jazz.png);
+    background-size: cover;
+}
+
+
+
+.rnb {
+    background-image: url(./ikoner/rogb.png);
+    background-size: cover;
+}
+
+
 
 /* Oversigt */
 #oversigt {
