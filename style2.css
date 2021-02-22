@@ -81,9 +81,48 @@ button:hover p {
 }
 
 .alle {
-    background-image: url(alle-test.png);
+    background-image: url(./ikoner/alle.png);
     background-size: cover;
+}
 
+.pop {
+    background-image: url(./ikoner/pop.png);
+    background-size: cover;
+}
+
+.grunge {
+    background-image: url(./ikoner/grunge.png);
+    background-size: cover;
+}
+
+.hiphop {
+    background-image: url(./ikoner/hiphop.png);
+    background-size: cover;
+}
+
+.eurodance {
+    background-image: url(./ikoner/eurodance.png);
+    background-size: cover;
+}
+
+.ballade {
+    background-image: url(./ikoner/ballader.png);
+    background-size: cover;
+}
+
+.techno {
+    background-image: url(./ikoner/techno.png);
+    background-size: cover;
+}
+
+.jazz {
+    background-image: url(./ikoner/jazz.png);
+    background-size: cover;
+}
+
+.rnb {
+    background-image: url(./ikoner/rogb.png);
+    background-size: cover;
 }
 
 /* Oversigt */
