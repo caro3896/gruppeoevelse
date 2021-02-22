@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: rgb(129, 234, 115);
     background: radial-gradient(circle, rgb(239, 169, 185) 0%, rgb(216, 242, 147) 100%);
@@ -73,6 +77,10 @@ button {
     width: 86px;
     height: 86px;
     border-radius: 50%;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 button p {
@@ -155,6 +163,7 @@ article {
 }
 
 article:hover {
+    cursor: pointer;
     transform: scale(1.05);
     background: rgba(240, 46, 170, 0.15);
     transition: 0.5s;
