@@ -179,6 +179,8 @@ button:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
+
+    margin-bottom: 50px;
 }
 
 article {
@@ -277,6 +279,7 @@ footer {
     /* Filtre/Sortering */
     #sortering {
         width: 200px;
+        max-height: 1500px;
     }
 
     #biblo {
