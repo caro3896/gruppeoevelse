@@ -18,7 +18,7 @@ const header = document.querySelector("#sortering h3");
 //Første funktion der kaldes efter DOM er loaded
 function start() {
     console.log("DOM er loaded");
-    const filterKnapper = document.querySelectorAll("#genre button");
+    const filterKnapper = document.querySelectorAll("#genre .btn");
     filterKnapper.forEach(knap => knap.addEventListener("click", filtrerGenre));
     //    document.querySelector(".sorter").addEventListener("click", toggleMenu);
     hentData();
