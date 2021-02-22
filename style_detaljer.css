@@ -39,6 +39,7 @@ h2 {
 
 /* Tilbage knap */
 .tilbage {
+    cursor: pointer;
     padding: 20px;
     margin: 20px;
     border: 2px dotted rgba(125, 156, 226, 0.74);
@@ -82,11 +83,16 @@ h2 {
 
     article {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 2fr;
     }
 
     section {
         max-width: 1300px;
         margin: 0 auto;
     }
+
+    .img {
+        max-width: 400px;
+    }
+
 }
