@@ -52,6 +52,16 @@ p {
 }
 
 /* Navigationsbar/filtre */
+#sortering {
+    padding: 20px;
+    margin: 40px 5vw;
+    border: 2px dotted rgba(125, 156, 226, 0.74);
+    background-color: #b6b6e5;
+    border-radius: 15px;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    transition: 0.5s;
+}
+
 #genre {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
@@ -130,13 +140,12 @@ button:hover p {
     max-height: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 30px;
 }
 
 article {
     max-height: 500px;
     padding: 20px;
-    margin: 20px;
     border: 2px dotted rgba(125, 156, 226, 0.74);
     background-color: #b6b6e5;
     border-radius: 15px;
@@ -160,11 +169,13 @@ article:hover {
     /* Navigationsbar/filtre */
     #sortering {
         width: 200px;
+        margin: 0 auto;
     }
 
     main {
         display: grid;
-        grid-template-columns: 2fr 4fr;
+        grid-template-columns: 1fr 3fr;
+        margin: 50px auto;
     }
 
     #genre {
@@ -183,7 +194,5 @@ article:hover {
     /* Oversigt */
     #oversigt {
         grid-template-columns: 1fr 1fr 1fr;
-        margin: 80px 0px 50px 0px;
-
     }
 }
