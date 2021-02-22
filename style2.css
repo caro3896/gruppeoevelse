@@ -175,7 +175,7 @@ button:hover {
 
 /* Oversigt */
 #oversigt {
-    max-height: 500px;
+    /*    max-height: 500px;*/
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
