@@ -8,9 +8,12 @@ html {
 }
 
 body {
+    background-color: #f6f596;
+    /*
     background: rgb(129, 234, 115);
     background: radial-gradient(circle, rgb(239, 169, 185) 0%, rgb(216, 242, 147) 100%);
     font-family: 'Roboto', sans-serif;
+*/
     margin: 0;
 }
 
@@ -63,8 +66,8 @@ button {
     margin: 0;
     height: 100vh;
     width: 100vw;
-    background-image: url(splash-test.png);
-    background-size: contain;
+    background-image: url(splash/Artboard_17.png);
+    background-size: cover;
     background-position: 50%;
 }
 
@@ -90,12 +93,10 @@ button {
 
 /* Navigation */
 nav {
-    position: sticky;
-    background-color: rgb(255, 123, 172);
+    background-color: rgba(240, 46, 170, 0.15);
     height: 80px;
     width: 100vw;
     display: flex;
-    justify-content: space-around;
     margin-bottom: 20px;
 }
 
@@ -105,10 +106,22 @@ nav a {
     text-decoration: none;
     font-weight: 500;
     font-size: 1.2rem;
+    padding: 10px;
+    border: 2px dotted rgba(125, 156, 226, 0.74);
+    background-color: rgba(240, 46, 170, 0.4);
+    border-radius: 15px;
 }
 
 nav a:hover {
+    transition: 0.5s;
     text-decoration: underline;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    transition: 0.5s;
+}
+
+nav a:focus {
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    transition: 0.5s;
 }
 
 /* Filtre/sortering */
@@ -116,7 +129,7 @@ nav a:hover {
     padding: 20px;
     margin-bottom: 40px;
     border: 2px dotted rgba(125, 156, 226, 0.74);
-    background-color: #b6b6e5;
+    background-color: #d2d2ed;
     border-radius: 15px;
     box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
     transition: 0.5s;
@@ -125,7 +138,7 @@ nav a:hover {
 #genre {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    gap: 20px;
+    grid-sgap: 20px;
     overflow-x: scroll;
 }
 
@@ -220,7 +233,7 @@ article {
     max-height: 500px;
     padding: 20px;
     border: 2px dotted rgba(125, 156, 226, 0.74);
-    background-color: #b6b6e5;
+    background-color: #bfe8ff;
     border-radius: 15px;
     box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 
@@ -324,6 +337,7 @@ footer p {
     /* Splash */
 
     /*    Navigation */
+    nav {}
 
     /* Filtre/Sortering */
     #sortering {
