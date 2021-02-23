@@ -35,6 +35,7 @@ function visSang() {
     document.querySelector(".udgivelse").textContent = `Udgivelsesår: ${sang.udgivelsesår}`;
     document.querySelector(".land").textContent = `Land: ${sang.land}`;
     document.querySelector(".genre").textContent = `Genre: ${sang.genre}`;
+    document.querySelector(".beskrivelse").textContent = `Beskrivelse: ${sang.beskrivelse}`;
     document.querySelector("button").addEventListener("click", tilbage);
 }
 
