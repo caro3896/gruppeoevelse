@@ -14,6 +14,8 @@ window.addEventListener("DOMContentLoaded", start);
 let sange;
 let filter = "alle";
 const header = document.querySelector("#sortering h3");
+let nav = document.querySelector("nav");
+let sticky = nav.offsetTop; //Får positionen af navbaren
 
 //Første funktion der kaldes efter DOM er loaded
 function start() {
@@ -21,7 +23,17 @@ function start() {
     //Oprettelse af filterknapper
     const filterKnapper = document.querySelectorAll("#genre .btn");
     filterKnapper.forEach(knap => knap.addEventListener("click", filtrerGenre)); // - lytter efter klik på hver knap
+    window.addEventListener("scroll", stickyNav); //Lytter efter scroll på siden og kalder funktionen stickyNav
     hentData();
+}
+
+//Funktion der gør navbaren sticky når der scrolles forbi den oprindelige position
+function stickyNav() {
+    if (window.pageYOffset >= sticky) {
+        nav.classList.add("sticky")
+    } else {
+        nav.classList.remove("sticky");
+    }
 }
 
 //Funktion der filtrerer sangene efter det aktive/valgte filter og kalder på funktion visSange (så sange for valgte filter vises)
