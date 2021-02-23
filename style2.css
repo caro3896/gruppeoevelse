@@ -303,12 +303,12 @@ footer {
 
 footer p {
     margin: 0;
-    margin-top: 15px;
     text-align: left;
     font-size: 0.8rem;
 }
 
 .icons {
+    margin-top: 15px;
     display: flex;
     justify-content: space-around;
 }
@@ -369,6 +369,10 @@ footer p {
 
     #footer p {
         margin-top: 15px;
+    }
+
+    .icons {
+        margin-top: 0;
     }
 
     .icons img {
