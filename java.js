@@ -1,4 +1,4 @@
-//Konstanter for restdb
+//Opretter konstanter for restdb
 const url = "https://faellespassion-9f07.restdb.io/rest/faellespassion";
 const medieurl = "https://faellespassion-9f07.restdb.io/media/";
 const options = {
@@ -18,39 +18,24 @@ const header = document.querySelector("#sortering h3");
 //Første funktion der kaldes efter DOM er loaded
 function start() {
     console.log("DOM er loaded");
+    //Oprettelse af filterknapper
     const filterKnapper = document.querySelectorAll("#genre .btn");
-    filterKnapper.forEach(knap => knap.addEventListener("click", filtrerGenre));
-    //    document.querySelector(".sorter").addEventListener("click", toggleMenu);
+    filterKnapper.forEach(knap => knap.addEventListener("click", filtrerGenre)); // - lytter efter klik på hver knap
     hentData();
 }
 
-////Eventlistener til burgermenu
-//function toggleMenu() {
-//    console.log("toggleMenu");
-//
-//    document.querySelector("#filtre").classList.toggle("show");
-//
-//    let erVist = document.querySelector("#filtre").classList.contains("show");
-//
-//    if (erVist == true) {
-//        document.querySelector(".sorter").textContent = "Sorter efter ▴";
-//    } else {
-//        document.querySelector(".sorter").textContent = "Sorter efter ▾";
-//    }
-//}
-
-//Eventlistener knyttet til knapperne der vælger det aktive filter
+//Funktion der filtrerer sangene efter det aktive/valgte filter og kalder på funktion visSange (så sange for valgte filter vises)
 function filtrerGenre() {
     console.log("Klikket på genre");
     filter = this.dataset.genre;
     document.querySelector(".valgt").classList.remove("valgt");
     this.classList.add("valgt");
     visSange();
-    header.textContent = this.textContent;
+    header.textContent = this.textContent; //Udskriver det valgte filter i headeren (h3)
 }
 
 
-//Henter data fra restdb
+//Henter data fra restdb og kalder funktionen visSange
 async function hentData() {
     console.log("Data fra restdb hentes");
     const respons = await fetch(url, options);
@@ -62,27 +47,29 @@ async function hentData() {
 const dest = document.querySelector("#oversigt");
 const template = document.querySelector("template").content;
 
-//Funktion der viser sange i liste view
+//Funktion der viser sange i liste view - sætter hver enkelt sang ind i HTML'en
 function visSange() {
-    console.log("visSange");
+    console.log("Sange vises");
 
-    dest.textContent = "";
+    dest.textContent = ""; //Templaten tømmes for indhold før der tilføjes nyt
 
+    //For hver sang tilføjes bl.a. billede, titel, kunstner osv. (data hentes fra restdb) og indsættes i HTML'en via templaten
     sange.forEach(sang => {
         console.log("Genre", sang.genre);
         if (filter == sang.genre || filter == "alle") {
 
-            const klon = template.cloneNode(true);
+            const klon = template.cloneNode(true); //Templaten klones og fyldes med indhold
             klon.querySelector(".billede").src = medieurl + sang.profilbillede;
             klon.querySelector(".titel").textContent = sang.titel;
             klon.querySelector(".kunstner").textContent = sang.band;
 
-            klon.querySelector(".sang").addEventListener("click", () => visDetaljer(sang));
-            dest.appendChild(klon);
+            klon.querySelector(".sang").addEventListener("click", () => visDetaljer(sang)); //Lytter efter klik på specifik sang og kalder visDetaljer for sangen
+            dest.appendChild(klon); //Tilføjer klonen til DOM
         }
     })
 }
 
+//Kalder på en ny html side (detaljer.html) for at se single view af den valgte sang
 function visDetaljer(hvad) {
     location.href = `detaljer.html?id=${hvad._id}`;
 }

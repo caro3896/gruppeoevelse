@@ -27,26 +27,38 @@ section {
     margin: 0 5vw;
 }
 
-h3 {
-    margin-top: 10px;
-}
-
-article h3 {
-    text-align: center;
-}
+/* Fonte */
 
 h2 {
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
 }
 
+h3 {
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
 p {
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
     font-style: italic;
 }
 
+a {
+    font-family: 'Open Sans', sans-serif;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+}
+
 /* Splash/forside */
 #splash {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1.5fr auto 1fr;
     max-width: none;
     margin: 0;
     height: 100vh;
@@ -56,22 +68,43 @@ p {
     background-position: 50%;
 }
 
+.logo {}
+
+.velkommen {
+    color: blue;
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.velkommen h2 {}
+
+.velkommen p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.velkommen a {
+    color: blue;
+}
+
 /* Navigation */
 nav {
-    /*    background-color: white;*/
-    /*    height: 50px;*/
+    position: sticky;
+    background-color: rgb(255, 123, 172);
+    height: 80px;
+    width: 100vw;
     display: flex;
     justify-content: space-around;
-    margin: 30px auto 30px auto;
-    max-width: 1000px;
+    margin-bottom: 20px;
 }
 
 nav a {
-    /*    margin: auto;*/
+    margin: auto;
     color: white;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 nav a:hover {
@@ -201,7 +234,14 @@ article:hover {
     transition: 0.5s;
 }
 
+article h3 {
+    text-align: center;
+}
+
 /* Input felt */
+#input {
+    margin-bottom: 50px;
+}
 
 #input h3 {
     color: white;
@@ -216,8 +256,6 @@ article:hover {
 }
 
 #tip {
-    width: 80vw;
-    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -226,6 +264,7 @@ article:hover {
 
 #besked {
     width: 80vw;
+    max-width: 800px;
     height: 50px;
 }
 
@@ -256,15 +295,26 @@ article:hover {
 
 footer {
     width: 100vw;
-    height: 200px;
+    height: auto;
+    background-color: rgb(255, 123, 172);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    margin: 0;
+    margin-top: 15px;
+    text-align: left;
+    font-size: 0.8rem;
 }
 
 .icons {
     display: flex;
+    justify-content: space-around;
 }
 
 .icons img {
-    width: 50px;
+    width: 60px;
 }
 
 /* DESKTOP REGLER */
@@ -274,7 +324,6 @@ footer {
     /* Splash */
 
     /*    Navigation */
-    nav {}
 
     /* Filtre/Sortering */
     #sortering {
@@ -309,5 +358,29 @@ footer {
     #submit {
         margin-left: 30px;
         margin-top: 0;
+    }
+
+    /*    Footer */
+
+    #footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #footer p {
+        margin-top: 15px;
+    }
+
+    .icons img {
+        margin-right: 50px;
+    }
+}
+
+/* ---- TABLET REGLER ---- */
+@media (orientation: portrait) and (min-width: 500px) {
+    #splash {}
+
+    #oversigt {
+        grid-template-columns: 1fr 1fr;
     }
 }
