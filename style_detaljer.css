@@ -19,22 +19,30 @@ section {
     margin: 0 5vw;
 }
 
+/* Fonte */
+
 h3 {
     margin-top: 10px;
-}
-
-article h3 {
-    text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h2 {
     font-size: 1.5rem;
     font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.img p {
-    text-align: center;
-    font-style: italic;
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+a {
+    font-family: 'Open Sans', sans-serif;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* Tilbage knap */
@@ -77,6 +85,15 @@ h2 {
     transition: 0.5s;
 }
 
+article h3 {
+    text-align: center;
+}
+
+.img p {
+    text-align: center;
+    font-style: italic;
+}
+
 /* DESKTOP REGLER */
 @media (min-width:600px) {
 
@@ -84,6 +101,7 @@ h2 {
     article {
         display: grid;
         grid-template-columns: 1fr 2fr;
+        column-gap: 30px;
     }
 
     section {
