@@ -9,11 +9,6 @@ html {
 
 body {
     background-color: #f6f596;
-    /*
-    background: rgb(129, 234, 115);
-    background: radial-gradient(circle, rgb(239, 169, 185) 0%, rgb(216, 242, 147) 100%);
-    font-family: 'Roboto', sans-serif;
-*/
     margin: 0;
 }
 
@@ -93,11 +88,14 @@ button {
 
 /* Navigation */
 nav {
-    background-color: rgba(240, 46, 170, 0.15);
-    height: 80px;
+    background-color: rgb(252, 217, 152);
+    height: 100px;
     width: 100vw;
     display: flex;
     margin-bottom: 20px;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
 }
 
 nav a {
@@ -108,20 +106,26 @@ nav a {
     font-size: 1.2rem;
     padding: 10px;
     border: 2px dotted rgba(125, 156, 226, 0.74);
-    background-color: rgba(240, 46, 170, 0.4);
+    background-color: #d2d2ed;
     border-radius: 15px;
 }
 
 nav a:hover {
     transition: 0.5s;
     text-decoration: underline;
+    background: rgba(240, 46, 170, 0.15);
+    transform: scale(1.05);
     box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
-    transition: 0.5s;
 }
 
-nav a:focus {
-    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
-    transition: 0.5s;
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + #biblo {
+    padding-top: 100px;
 }
 
 /* Filtre/sortering */
@@ -138,7 +142,7 @@ nav a:focus {
 #genre {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-sgap: 20px;
+    grid-gap: 20px;
     overflow-x: scroll;
 }
 
@@ -257,14 +261,12 @@ article h3 {
 }
 
 #input h3 {
-    color: white;
     text-align: center;
     font-size: 1.5rem;
 }
 
 #input p {
     font-size: 1rem;
-    color: white;
     text-align: center;
 }
 
@@ -288,19 +290,17 @@ article h3 {
     border: 2px dotted rgba(125, 156, 226, 0.74);
     background-color: #b6b6e5;
     border-radius: 15px;
-    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
-        rgba(240, 46, 170, 0.3) -10px 10px,
-        rgba(240, 46, 170, 0.2) -15px 15px,
-        rgba(240, 46, 170, 0.1) -20px 20px,
-        rgba(240, 46, 170, 0.05) -25px 25px;
-
-    transition: 0.5s;
 }
 
 #tip button:hover {
     cursor: pointer;
     transform: scale(1.05);
     background: rgba(240, 46, 170, 0.15);
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+        rgba(240, 46, 170, 0.3) -10px 10px,
+        rgba(240, 46, 170, 0.2) -15px 15px,
+        rgba(240, 46, 170, 0.1) -20px 20px,
+        rgba(240, 46, 170, 0.05) -25px 25px;
     transition: 0.5s;
 }
 
@@ -309,7 +309,7 @@ article h3 {
 footer {
     width: 100vw;
     height: auto;
-    background-color: rgb(255, 123, 172);
+    background-color: rgba(240, 46, 170, 0.15);
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -337,7 +337,9 @@ footer p {
     /* Splash */
 
     /*    Navigation */
-    nav {}
+    nav a {
+        margin: auto 100px;
+    }
 
     /* Filtre/Sortering */
     #sortering {
@@ -360,6 +362,8 @@ footer p {
     /* Oversigt */
     #oversigt {
         grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 40px;
+        margin-left: 0;
     }
 
     /*    Input */
@@ -397,6 +401,10 @@ footer p {
 /* ---- TABLET REGLER ---- */
 @media (orientation: portrait) and (min-width: 500px) {
     #splash {}
+
+    nav a {
+        margin: auto;
+    }
 
     #oversigt {
         grid-template-columns: 1fr 1fr;
