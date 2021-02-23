@@ -4,9 +4,7 @@
 }
 
 body {
-    background: rgb(129, 234, 115);
-    background: radial-gradient(circle, rgb(239, 169, 185) 0%, rgb(216, 242, 147) 100%);
-    font-family: 'Roboto', sans-serif;
+    background-color: #f6f596;
     margin: 0;
 }
 
@@ -74,7 +72,7 @@ button {
     padding: 20px;
     margin: 20px;
     border: 2px dotted rgba(125, 156, 226, 0.74);
-    background-color: #b6b6e5;
+    background-color: #bfe8ff;
     border-radius: 15px;
     box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
         rgba(240, 46, 170, 0.3) -10px 10px,
@@ -94,6 +92,38 @@ article h3 {
     font-style: italic;
 }
 
+.text {
+    margin: auto;
+}
+
+/* Footer */
+
+footer {
+
+    width: 100vw;
+    height: auto;
+    background-color: rgba(240, 46, 170, 0.15);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    margin: 0;
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+.icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icons img {
+    width: 60px;
+}
+
+
 /* DESKTOP REGLER */
 @media (min-width:600px) {
 
@@ -111,6 +141,30 @@ article h3 {
 
     .img {
         max-width: 400px;
+    }
+
+    /*    Footer */
+
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+
+    #footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #footer p {
+        margin-top: 15px;
+    }
+
+    .icons {
+        margin-top: 0;
+    }
+
+    .icons img {
+        margin-right: 50px;
     }
 
 }
