@@ -89,10 +89,9 @@ button {
 /* Navigation */
 nav {
     background-color: rgb(252, 217, 152);
-    height: 100px;
+    height: 80px;
     width: 100vw;
     display: flex;
-    margin-bottom: 20px;
     justify-content: center;
     overflow: hidden;
     z-index: 1;
