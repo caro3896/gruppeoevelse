@@ -51,18 +51,17 @@ button {
     border: 2px dotted rgba(125, 156, 226, 0.74);
     background-color: #b6b6e5;
     border-radius: 15px;
+}
+
+.tilbage:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background: rgba(240, 46, 170, 0.15);
     box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
         rgba(240, 46, 170, 0.3) -10px 10px,
         rgba(240, 46, 170, 0.2) -15px 15px,
         rgba(240, 46, 170, 0.1) -20px 20px,
         rgba(240, 46, 170, 0.05) -25px 25px;
-
-    transition: 0.5s;
-}
-
-.tilbage:hover {
-    transform: scale(1.05);
-    background: rgba(240, 46, 170, 0.15);
     transition: 0.5s;
 }
 
