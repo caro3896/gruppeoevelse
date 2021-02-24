@@ -63,6 +63,10 @@ const template = document.querySelector("template").content;
 function visSange() {
     console.log("Sange vises");
 
+    let loadingAnimation = document.querySelector('.preload');
+    loadingAnimation.style.display = 'none';
+    console.log("animation slut");
+
     dest.textContent = ""; //Templaten tømmes for indhold før der tilføjes nyt
 
     //For hver sang tilføjes bl.a. billede, titel, kunstner osv. (data hentes fra restdb) og indsættes i HTML'en via templaten
