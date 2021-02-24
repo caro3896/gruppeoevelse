@@ -27,6 +27,10 @@ async function hentData() {
 //Funktion der indsætter data fra restdb i HTML'en
 function visSang() {
     console.log("Sange", sang);
+    let loadingAnimation = document.querySelector('.preload');
+    loadingAnimation.style.display = 'none';
+    console.log("animation slut");
+
     document.querySelector(".billede").src = medieurl + sang.profilbillede;
     document.querySelector(".titel").textContent = sang.titel;
     document.querySelector(".kunstner").textContent = sang.band;
