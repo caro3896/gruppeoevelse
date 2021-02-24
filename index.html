@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweasy's</title>
+    <title>Sweasy's Hub</title>
     <link rel="stylesheet" href="style2.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -22,6 +22,7 @@
         </div>
     </header>
     <main>
+        <!-- Navigationsbar til hele siden -->
         <nav>
             <a href="#splash">Forside</a>
             <a href="#sortering">Sange</a>
@@ -31,6 +32,7 @@
             <section id="sortering">
                 <h2>Sorter efter:</h2>
                 <h3>Alle</h3>
+                <!-- Filtreringsknappet med data-attributter -->
                 <div id="genre">
                     <div data-genre="alle" class="btn valgt">
                         <button class="alle">
@@ -66,7 +68,9 @@
                 </div>
             </section>
 
+            <!-- Container til templaten -->
             <section id="oversigt">
+                <!-- Template til de enkelte sange - fyldes med data fra restdb -->
                 <template>
                     <article class="sang">
                         <img class="billede" src="" alt="">
@@ -82,6 +86,7 @@
             <p>Synes du vi mangler en bestemt sang på vores liste?
                 <br>Tøv endelig ikke med at skrive til os!
             </p>
+            <!-- Form/input felt hvor man kan sende en besked og ønske en sang -->
             <form id="tip">
                 <input name="besked" type="text" id="besked" placeholder="Skriv din besked her...">
                 <button id="submit">Send</button>
@@ -93,6 +98,7 @@
             <div copyright>
                 <p>&copy; 2021 Jan, Katrin, Caroline &#38; Oliver</p>
             </div>
+            <!-- Ikoner med link til div. SoMe platforme -->
             <div class="icons">
                 <img src="linkikon/instagram.png" alt="instagram ikon">
                 <img src="linkikon/spotify.png" alt="spotify ikon">
