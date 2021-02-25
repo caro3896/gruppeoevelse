@@ -98,6 +98,17 @@ button {
     font-family: 'Open Sans', sans-serif;
 }
 
+/* Splash */
+#splash {
+    /*    Splashbilledet i toppen */
+    max-width: none;
+    margin: 0;
+    height: 20vh;
+    width: 100vw;
+    background-image: url(splash/final.svg);
+    background-size: cover;
+}
+
 /* Tilbage knap */
 .tilbage {
     cursor: pointer;
@@ -127,6 +138,7 @@ button {
 .sang-detalje {
     padding: 20px;
     margin: 20px;
+    margin-bottom: 50px;
     border: 2px dotted rgba(125, 156, 226, 0.74);
     background-color: #bfe8ff;
     border-radius: 15px;
@@ -155,7 +167,6 @@ article h3 {
 /* Footer */
 
 footer {
-
     width: 100vw;
     height: auto;
     background-color: rgba(240, 46, 170, 0.15);
@@ -214,11 +225,6 @@ footer p {
     }
 
     /*    Footer */
-
-    footer {
-        position: absolute;
-        bottom: 0;
-    }
 
     #footer {
         display: flex;
