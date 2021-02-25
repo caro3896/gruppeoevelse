@@ -116,30 +116,35 @@ button {
     /*    Laver grid-layout på splash, sådan at det er nemmere at placere elementerne (tekst og logo)*/
     display: grid;
     grid-template-columns: 1fr auto 1fr;
-    grid-template-rows: 1.5fr auto 1fr;
+    grid-template-rows: 0.5fr auto 1fr;
     /*    Splashbilledet skal fylde hele siden */
     max-width: none;
     margin: 0;
     height: 100vh;
     width: 100vw;
-    background-image: url(splash/Artboard_17.png);
+    background-image: url(splash/baggrund6.png);
     background-size: cover;
     background-position: 50%;
 }
 
-.logo {}
+.logo {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin: auto;
+}
 
 .velkommen {
-    color: blue;
     text-align: center;
     font-size: 1.2rem;
     /*    Placerer teksten på splashbilledet */
     grid-column: 2/3;
-    grid-row: 3/4;
+    grid-row: 2/3;
+    margin-top: 100vw;
+    z-index: 1;
 }
 
 .velkommen h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .velkommen p {
@@ -148,7 +153,7 @@ button {
 }
 
 .velkommen a {
-    color: blue;
+    color: black;
 }
 
 /* Navigation */
@@ -405,6 +410,19 @@ footer p {
 @media (min-width:600px) {
 
     /* Splash */
+    #splash {
+        grid-template-rows: 0.2fr auto 1fr;
+    }
+
+    .logo {
+        width: 45vw;
+    }
+
+    .velkommen {
+        margin-top: 37vw;
+    }
+
+
     /*animation*/
     .circle_1,
     .circle_2,
@@ -491,7 +509,17 @@ footer p {
 
 /* ---- TABLET REGLER ---- */
 @media (orientation: portrait) and (min-width: 500px) {
-    #splash {}
+    #splash {
+        grid-template-rows: 0.5fr auto 1fr;
+    }
+
+    .logo {
+        width: 80vw;
+    }
+
+    .velkommen {
+        margin-top: 70vw;
+    }
 
     nav a {
         margin: auto;
