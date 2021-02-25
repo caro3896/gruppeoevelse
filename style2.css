@@ -446,6 +446,7 @@ footer p {
     /* Oversigt */
     #oversigt {
         grid-template-columns: 1fr 1fr 1fr;
+        align-content: start;
         grid-gap: 40px;
         margin-left: 0;
     }
