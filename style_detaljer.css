@@ -101,11 +101,12 @@ button {
 /* Tilbage knap */
 .tilbage {
     cursor: pointer;
-    padding: 20px;
+    padding: 10px 20px;
     margin: 20px;
     border: 2px dotted rgba(125, 156, 226, 0.74);
     background-color: #b6b6e5;
     border-radius: 15px;
+    font-size: 1.8rem;
 }
 
 .tilbage:hover {
@@ -181,7 +182,7 @@ footer p {
 /* DESKTOP REGLER */
 @media (min-width:600px) {
 
-  /*animation*/
+    /*animation*/
     .circle_1,
     .circle_2,
     .circle_3,
